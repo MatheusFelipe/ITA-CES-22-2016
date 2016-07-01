@@ -15,7 +15,9 @@ public class Calculadora {
 	private float result = 0;
 	private String op = "";
 	private boolean isEqual = false;
-	private JTextField textFieldAns;
+	public JTextField textFieldAns;
+	public JButton btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+	public JButton btn_add, btn_minus, btn_mult, btn_div, btn_equal, btnClear;
 
 		/**
 	 * Create the application.
@@ -33,7 +35,7 @@ public class Calculadora {
 		frame.getContentPane().setLayout(null);
 		
 		//button 0
-		JButton btn0 = new JButton("0");
+		btn0 = new JButton("0");
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -49,7 +51,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn0);
 		
 		//button 1
-		JButton btn1 = new JButton("1");
+		btn1 = new JButton("1");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(!isEqual)
@@ -65,7 +67,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn1);
 		
 		//button 2
-		JButton btn2 = new JButton("2");
+		btn2 = new JButton("2");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -81,7 +83,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn2);
 		
 		//button 3
-		JButton btn3 = new JButton("3");
+		btn3 = new JButton("3");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -97,7 +99,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn3);
 		
 		//button 4
-		JButton btn4 = new JButton("4");
+		btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -113,7 +115,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn4);
 		
 		//button 5
-		JButton btn5 = new JButton("5");
+		btn5 = new JButton("5");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -129,7 +131,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn5);
 		
 		//button 6
-		JButton btn6 = new JButton("6");
+		btn6 = new JButton("6");
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -145,7 +147,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn6);
 		
 		//button 7
-		JButton btn7 = new JButton("7");
+		btn7 = new JButton("7");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -161,7 +163,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn7);
 		
 		//button 8
-		JButton btn8 = new JButton("8");
+		btn8 = new JButton("8");
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -177,7 +179,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn8);
 		
 		//button 9
-		JButton btn9 = new JButton("9");
+		btn9 = new JButton("9");
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!isEqual)
@@ -194,7 +196,7 @@ public class Calculadora {
 		
 		
 		//button OP SUM
-		JButton btn_add = new JButton("+");
+		btn_add = new JButton("+");
 		btn_add.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				op = "+";
@@ -202,11 +204,11 @@ public class Calculadora {
 				value = 0;
 			}
 		});
-		btn_add.setBounds(173, 218, 48, 23);
+		btn_add.setBounds(231, 218, 48, 23);
 		frame.getContentPane().add(btn_add);
 		
 		//button OP SUBTRACT
-		JButton btn_minus = new JButton("-");
+		btn_minus = new JButton("-");
 		btn_minus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				op = "-";
@@ -218,7 +220,7 @@ public class Calculadora {
 		frame.getContentPane().add(btn_minus);
 		
 		//button OP MULTIPLY
-		JButton btn_mult = new JButton("x");
+		btn_mult = new JButton("x");
 		btn_mult.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				op = "*";
@@ -226,11 +228,11 @@ public class Calculadora {
 				value = 0;
 			}
 		});
-		btn_mult.setBounds(231, 117, 48, 23);
+		btn_mult.setBounds(231, 150, 48, 23);
 		frame.getContentPane().add(btn_mult);
 		
 		//button OP DIVIDE
-		JButton btn_div = new JButton("/");
+		btn_div = new JButton("/");
 		btn_div.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				op = "/";
@@ -238,11 +240,11 @@ public class Calculadora {
 				value = 0;
 			}
 		});
-		btn_div.setBounds(231, 150, 48, 23);
+		btn_div.setBounds(231, 117, 48, 23);
 		frame.getContentPane().add(btn_div);
 				
 		//button EQUALS
-		JButton btn_equal = new JButton("=");
+		btn_equal = new JButton("=");
 		btn_equal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				isEqual = true;
@@ -276,7 +278,7 @@ public class Calculadora {
 				}	 
 			}
 		});
-		btn_equal.setBounds(231, 218, 48, 23);
+		btn_equal.setBounds(173, 218, 48, 23);
 		frame.getContentPane().add(btn_equal);
 		
 		//Text Field
@@ -286,7 +288,7 @@ public class Calculadora {
 		textFieldAns.setColumns(10);
 		
 		//button CLEAR
-		JButton btnClear = new JButton("C");
+		btnClear = new JButton("C");
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				value = keep = 0;
